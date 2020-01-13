@@ -1,0 +1,17 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    // position: fixed;
+    align-items: center;
+    box-sizing: border-box;
+    width: 100%;
+    height: 70px;
+    background: grey;
+    color: white;
+    font-size: 20px;
+    padding: 0 40px;
+
+    .cart-wrapper {
+        display: flex;
+    }
+}

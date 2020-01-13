@@ -1,16 +1,8 @@
-import { createStore, applyMiddleware } from 'redux'
-function todos(state = [], action) {
-  switch (action.type) {
-    case 'ADD_TODO':
-      return state.concat([action.text])
-    default:
-      return state
-  }
-}
-const store = createStore(todos, ['Use Redux'])
-store.dispatch({
-  type: 'ADD_TODO',
-  text: 'Read the docs'
-})
+import { createStore, applyMiddleware } from 'redux';
+import logger from 'redux-logger';
+import rootReducer from './reducers';
 
-console.log(store.getState())
+export default () => {
+  const store = createStore(rootReducer, applyMiddleware(logger));
+  return store;
+};
