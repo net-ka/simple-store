@@ -1,3 +1,4 @@
-.content-wrapper {
-  min-height: calc(100vh - 70px);
+.all-content-wrapper {
+  display: flex;
+  width: 100%;
 }

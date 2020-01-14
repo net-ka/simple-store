@@ -1,3 +1,8 @@
+.content-wrapper {
+    min-height: calc(100vh - 70px);
+    width: 80%;
+  }
+
 .films-wrapper {
     display: flex;
     flex-wrap: wrap;
@@ -6,6 +11,7 @@
     box-sizing: border-box;
     color: white;
     font-size: 15px;
+    border-left: 1px solid gray;
 
     .film-card-wrapper {
         display: flex;
