@@ -17,7 +17,6 @@ import './filmCard.scss'
 
 class FilmCards extends Component {
     state = {
-        films: this.props.films,
         prev: 0,
         current: 1
     }
@@ -37,7 +36,8 @@ class FilmCards extends Component {
     }
 
     render() {
-        const { films, prev, current} = this.state;
+        const { prev, current} = this.state;
+        const { films } = this.props;
         const filmStart = 10 * prev;
         const filmEnd = 10 * current;
         const currentFilmList = films.slice(filmStart, filmEnd);

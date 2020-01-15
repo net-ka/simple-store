@@ -1,7 +1,10 @@
 const initialState = {
     isReady: false,
     items: null,
-    filterBy: 'all'
+    filterBy: {
+        filter: 'all',
+        filteredItems: null
+    }
 };
 
 export default (state = initialState, action) => {

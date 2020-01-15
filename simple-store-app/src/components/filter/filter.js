@@ -15,30 +15,46 @@ import { setFilter } from '../../actions/filter';
 
 class Filter extends Component {
     state = {
-        films: this.props.films,
         activeItem: "all"
     }
 
     handleClickFilter = (target) => {
+        const allFilterBtns = document.querySelectorAll('.filter-btn');
+        allFilterBtns.forEach(item => item.classList.remove('active-btn'));
+        target.classList.add('active-btn');
+
         const name = target.name;
-        const { setFilter } = this.props;
+        const { setFilter, films } = this.props;
 
         this.setState({
             activeItem: {name}
         });
 
-        setFilter(name);
+        const filter = (films, name) => {
+            switch (name) {
+              case 'all':
+                return films;
+              case 'before1970':
+                return films.filter(item => item.year <= 1970);
+              case 'after1970':
+                return films.filter(item => item.year > 1970);;
+              default:
+                return films;
+            };
+          }
 
-        this.props.applyFilter();
+        const newItems = filter(films, name);
+
+        setFilter(name, newItems);
     }
 
 
     render() {
         return(
             <section className="filter-wrapper">
-                <button name="all" onClick={(e) => this.handleClickFilter(e.target)}>Все</button>
-                <button name="before1970" onClick={(e) => this.handleClickFilter(e.target)}>До 1970 года</button>
-                <button name="after1970" onClick={(e) => this.handleClickFilter(e.target)}>После 1970 года</button>
+                <button className="filter-btn active-btn" name="all" onClick={(e) => this.handleClickFilter(e.target)}>Все</button>
+                <button className="filter-btn" name="before1970" onClick={(e) => this.handleClickFilter(e.target)}>До 1970 года</button>
+                <button className="filter-btn" name="after1970" onClick={(e) => this.handleClickFilter(e.target)}>После 1970 года</button>
             </section>
         );
     }
@@ -46,12 +62,20 @@ class Filter extends Component {
 
 // export default Filter
 
+// const mapStateToProps = ({ films }) => ({
+//     filterBy: films.filterBy
+//   });
+  
+//   const mapDispatchToProps = dispatch => ({
+//     setFilter: films => dispatch(setFilter(films))
+//   });
+
 const mapStateToProps = ({ films }) => ({
     filterBy: films.filterBy
   });
   
   const mapDispatchToProps = dispatch => ({
-    setFilter: films => dispatch(setFilter(films))
+    setFilter: (filter, filteredItems) => dispatch(setFilter(filter, filteredItems))
   });
   
 //   const mapDispatchToProps = dispatch => ({
