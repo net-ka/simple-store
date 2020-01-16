@@ -1,7 +1,7 @@
 header {
     display: flex;
     justify-content: space-between;
-    // position: fixed;
+    position: relative;
     align-items: center;
     box-sizing: border-box;
     width: 100%;
@@ -13,5 +13,45 @@ header {
 
     .cart-wrapper {
         display: flex;
+    }
+
+    .cart {
+        position: absolute;
+        background: rgb(176, 163, 184);
+        top: 70px;
+        right: 20px;
+        width: 40%;
+        padding: 5px;
+
+        li {
+            display: flex;
+            // justify-content: space-between;
+            margin-bottom: 10px;
+            width: 100%;
+
+            .cart-titles {
+                display: inline-block;
+                width: 55%;
+            }
+
+            .manage-number {
+                display: inline-block;
+                height: 30px;
+                width: 45%;
+
+                button {
+                    margin: 0 15px;
+                    background: white;
+                    outline: none;
+                    border: 1px solid rgb(175, 174, 174);
+                    height: 30px;
+                }
+
+                .change-number {
+                    width: 25px;
+                }
+            }
+
+        }
     }
 }

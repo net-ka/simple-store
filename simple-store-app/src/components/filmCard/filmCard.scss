@@ -29,7 +29,19 @@
         .film-title {
             height: 50px;
             text-align: center;
-            
+        }
+
+        button {
+            margin-bottom: 20px;
+            outline: none;
+            background: rgb(224, 224, 143);
+            border: 1px solid grey;
+            height: 35px;
+            cursor: pointer;
+
+            &:hover {
+                background: darken(rgb(224, 224, 143), 20%);
+            }
         }
     }
 
