@@ -1,0 +1,202 @@
+[
+  {
+    "id": 0,
+    "title": "Ирония судьбы, или С легким паром!",
+    "year": 1975,
+    "image": "https://thumbs.dfs.ivi.ru/storage32/contents/8/6/4f899a00965932a485521c1f5d641c.jpg/140x215/",
+    "price": 270,
+    "isFavorite": false
+  },
+  {
+    "id": 1,
+    "title": "Вечера на хуторе близ Диканьки",
+    "year": 1961,
+    "image": "https://thumbs.dfs.ivi.ru/storage4/contents/e/4/566f346cb46c6bae90c5b579f30160.jpg/140x215/",
+    "price": 210,
+    "isFavorite": false
+  },
+  {
+    "id": 2,
+    "title": "Иван Васильевич меняет профессию",
+    "year": 1973,
+    "image": "https://thumbs.dfs.ivi.ru/storage3/contents/4/9/115582612d85d505879af66229e399.jpg/140x215/",
+    "price": 170,
+    "isFavorite": false
+  },
+  {
+    "id": 3,
+    "title": "Девчата",
+    "year": 1961,
+    "image": "https://thumbs.dfs.ivi.ru/storage38/contents/5/8/6e84b8b29be3eb5d667934ceeb0b8a.jpg/140x215/",
+    "price": 156,
+    "isFavorite": false
+  },
+  {
+    "id": 4,
+    "title": "Джентльмены удачи",
+    "year": 1971,
+    "image": "https://thumbs.dfs.ivi.ru/storage28/contents/f/f/f67ffd69af56c02222acdb50999651.jpg/140x215/",
+    "price": 248,
+    "isFavorite": false
+  },
+  {
+    "id": 5,
+    "title": "Служебный роман",
+    "year": 1977,
+    "image": "https://thumbs.dfs.ivi.ru/storage8/contents/2/e/675d1bb5c97a85387e239903c7d6b3.jpg/140x215/",
+    "price": 204,
+    "isFavorite": false
+  },
+  {
+    "id": 6,
+    "title": "Операция «Ы» и другие приключения Шурика",
+    "year": 1965,
+    "image": "https://thumbs.dfs.ivi.ru/storage28/contents/3/f/521df8e102675dd0e3a4c3cd904d9f.jpg/140x215/",
+    "price": 289,
+    "isFavorite": false
+  },
+  {
+    "id": 7,
+    "title": "Москва слезам не верит",
+    "year": 1979,
+    "image": "https://thumbs.dfs.ivi.ru/storage28/contents/a/3/e5934de8927e963ab8391daba10d78.jpg/140x215/",
+    "price": 143,
+    "isFavorite": 0
+  },
+  {
+    "id": 8,
+    "title": "Морозко",
+    "year": 1965,
+    "image": "https://thumbs.dfs.ivi.ru/storage6/contents/2/c/0b08a78d479c68de263bfbf5e06d3e.jpg/140x215/",
+    "price": 120,
+    "isFavorite": false
+  },
+  {
+    "id": 9,
+    "title": "Кавказская пленница, или Новые приключения Шурика",
+    "year": 1966,
+    "image": "https://thumbs.dfs.ivi.ru/storage29/contents/e/2/e0f5cacf042268651c552a3160c7b6.jpg/140x215/",
+    "price": 267,
+    "isFavorite": false
+  },
+  {
+    "id": 10,
+    "title": "Бриллиантовая рука",
+    "year": 1969,
+    "image": "https://thumbs.dfs.ivi.ru/storage28/contents/7/0/9039d85c1d9fbb034fef4ef58a735d.jpg/140x215/",
+    "price": 238,
+    "isFavorite": false
+  },
+  {
+    "id": 11,
+    "title": "Карнавальная ночь",
+    "year": 1956,
+    "image": "https://thumbs.dfs.ivi.ru/storage4/contents/a/b/0124f6d715cabf5551bac7a7f895a6.jpg/140x215/",
+    "price": 185,
+    "isFavorite": false
+  },
+  {
+    "id": 12,
+    "title": "Самогонщики",
+    "year": 1962,
+    "image": "https://thumbs.dfs.ivi.ru/storage38/contents/f/3/fce69491cdb85ad2550adf8aae3140.jpg/140x215/",
+    "price": 193,
+    "isFavorite": false
+  },
+  {
+    "id": 13,
+    "title": "Свадьба в Малиновке",
+    "year": 1967,
+    "image": "https://thumbs.dfs.ivi.ru/storage8/contents/a/b/28aed32d735a18d132ecf48e92310b.jpg/140x215/",
+    "price": 136,
+    "isFavorite": false
+  },
+  {
+    "id": 14,
+    "title": "Двенадцать месяцев",
+    "year": 1972,
+    "image": "https://thumbs.dfs.ivi.ru/storage8/contents/7/e/34d84f0f6ad36f1d8115870ba92a6e.jpg/140x215/",
+    "price": 162,
+    "isFavorite": false
+  },
+  {
+    "id": 15,
+    "title": "12 стульев",
+    "year": 1971,
+    "image": "https://thumbs.dfs.ivi.ru/storage38/contents/e/e/76a07d08607c792a4234b744587fce.jpg/140x215/",
+    "price": 259,
+    "isFavorite": false
+  },
+  {
+    "id": 16,
+    "title": "Приключения Буратино",
+    "year": 1975,
+    "image": "https://thumbs.dfs.ivi.ru/storage38/contents/8/c/50ffbf00a7b116724f7766a545442c.jpg/140x215/",
+    "price": 239,
+    "isFavorite": false
+  },
+  {
+    "id": 17,
+    "title": "Берегись автомобиля",
+    "year": 1966,
+    "image": "https://thumbs.dfs.ivi.ru/storage4/contents/5/5/612b51ce6bcf78398d5e3b209d46b9.jpg/140x215/",
+    "price": 219,
+    "isFavorite": false
+  },
+  {
+    "id": 18,
+    "title": "За двумя зайцами",
+    "year": 1961,
+    "image": "https://thumbs.dfs.ivi.ru/storage4/contents/3/4/05b61595e17f5b5cfb3a9a9e45ca20.jpg/140x215/",
+    "price": 214,
+    "isFavorite": false
+  },
+  {
+    "id": 19,
+    "title": "Приключения Электроника",
+    "year": 1980,
+    "image": "https://thumbs.dfs.ivi.ru/storage28/contents/e/3/4b93c0c1e4bf9550c98507af902a5a.jpg/140x215/",
+    "price": 221,
+    "isFavorite": false
+  },
+  {
+    "id": 20,
+    "title": "В бой идут одни «старики»",
+    "year": 1973,
+    "image": "https://thumbs.dfs.ivi.ru/storage32/contents/e/9/196858d153084d961391ff2ef5f7d8.jpg/140x215/",
+    "price": 156,
+    "isFavorite": false
+  },
+  {
+    "id": 21,
+    "title": "Хоттабыч",
+    "year": 1956,
+    "image": "https://thumbs.dfs.ivi.ru/storage4/contents/7/4/112748b94a5421954e6f1071160305.jpg/140x215/",
+    "price": 203,
+    "isFavorite": false
+  },
+  {
+    "id": 22,
+    "title": "Золотой теленок",
+    "year": 1968,
+    "image": "https://thumbs.dfs.ivi.ru/storage6/contents/4/2/71f39fd418ddde449b6784c9c218d4.jpg/140x215/",
+    "price": 232,
+    "isFavorite": false
+  },
+  {
+    "id": 23,
+    "title": "Большая перемена",
+    "year": 1972,
+    "image": "https://thumbs.dfs.ivi.ru/storage2/contents/5/0/d9ee5eff4df1b3733eb5f308ec7625.jpg/140x215/",
+    "price": 271,
+    "isFavorite": false
+  },
+  {
+    "id": 24,
+    "title": "Собака на сене",
+    "year": 1977,
+    "image": "https://thumbs.dfs.ivi.ru/storage28/contents/0/1/3e0807272e3f07a86dbee20de9e7b9.jpg/140x215/",
+    "price": 225,
+    "isFavorite": false
+  }
+]
