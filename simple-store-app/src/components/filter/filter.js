@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 // import { bindActionCreators } from 'redux';
 // import * as filterActions from '../../actions/filter';
 import { setFilter } from '../../actions/filter';
+import * as favoritesActions from '../../actions/favorites';
 
 // const Filter = () => (
 //         <section className="filter-wrapper">
@@ -37,7 +38,9 @@ class Filter extends Component {
               case 'before1970':
                 return films.filter(item => item.year <= 1970);
               case 'after1970':
-                return films.filter(item => item.year > 1970);;
+                return films.filter(item => item.year > 1970);
+              case 'favorites':
+                return this.props.favorites;
               default:
                 return films;
             };
@@ -53,6 +56,7 @@ class Filter extends Component {
         return(
             <section className="filter-wrapper">
                 <button className="filter-btn active-btn" name="all" onClick={(e) => this.handleClickFilter(e.target)}>Все</button>
+                <button className="filter-btn" name="favorites" onClick={(e) => this.handleClickFilter(e.target)}>Избранное</button>
                 <button className="filter-btn" name="before1970" onClick={(e) => this.handleClickFilter(e.target)}>До 1970 года</button>
                 <button className="filter-btn" name="after1970" onClick={(e) => this.handleClickFilter(e.target)}>После 1970 года</button>
             </section>
@@ -70,12 +74,14 @@ class Filter extends Component {
 //     setFilter: films => dispatch(setFilter(films))
 //   });
 
-const mapStateToProps = ({ films }) => ({
-    filterBy: films.filterBy
+const mapStateToProps = ({ films, favorites }) => ({
+    films: films.items,
+    favorites: favorites.items
   });
   
   const mapDispatchToProps = dispatch => ({
-    setFilter: (filter, filteredItems) => dispatch(setFilter(filter, filteredItems))
+    setFilter: (filter, filteredItems) => dispatch(setFilter(filter, filteredItems)),
+    // ...bindActionCreators(favoritesActions, dispatch)
   });
   
 //   const mapDispatchToProps = dispatch => ({

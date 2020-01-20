@@ -19,9 +19,9 @@
         align-items: center;
         width: 15%;
         margin: 30px 20px;
-        background: rgb(190, 182, 182);
+        background: rgb(165, 158, 158);
 
-        img {
+        .film-img {
             width: 140px;
             margin-top: 15px;
         }
@@ -31,18 +31,40 @@
             text-align: center;
         }
 
-        button {
-            margin-bottom: 20px;
+        button { 
             outline: none;
             background: rgb(224, 224, 143);
-            border: 1px solid grey;
+            border: 1px solid white;
             height: 35px;
+            width: 90px;
             cursor: pointer;
 
             &:hover {
                 background: darken(rgb(224, 224, 143), 20%);
             }
         }
+
+        .do-btns-wrapper {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            box-sizing: border-box;
+            width: 100%;
+            padding: 0 10px;
+            margin-bottom: 20px;
+
+            .favorites-btn {
+                width: 32px;
+            }
+        }
+
+        // .added-favorites {
+        //     background: rgb(156, 224, 143);
+
+        //     &:hover {
+        //         background: darken(rgb(156, 224, 143), 20%);
+        //     }
+        // }
     }
 
    

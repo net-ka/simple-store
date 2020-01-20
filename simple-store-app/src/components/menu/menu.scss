@@ -5,46 +5,65 @@ header {
     align-items: center;
     box-sizing: border-box;
     width: 100%;
-    height: 70px;
+    height: 80px;
     background: grey;
     color: white;
-    font-size: 20px;
+    font-size: 18px;
     padding: 0 40px;
 
     .cart-wrapper {
         display: flex;
+
+        button {
+            width: 200px;
+            height: 40px;
+            background: rgb(176, 163, 184);
+            border: 1px solid white;
+            outline: none;
+            color: white;
+            font-weight: bold;
+            font-size: 22px;
+            cursor: pointer;
+        }
+    }
+
+    .hidden {
+        display: none;
     }
 
     .cart {
         position: absolute;
         background: rgb(176, 163, 184);
-        top: 70px;
+        top: 80px;
         right: 20px;
         width: 40%;
+        min-width: 530px;
         padding: 5px;
+        border: 1px solid white;
 
         li {
             display: flex;
-            // justify-content: space-between;
+            align-items: center;
             margin-bottom: 10px;
             width: 100%;
 
             .cart-titles {
                 display: inline-block;
-                width: 55%;
+                width: 50%;
             }
 
             .manage-number {
                 display: inline-block;
                 height: 30px;
-                width: 45%;
+                width: 50%;
 
                 button {
-                    margin: 0 15px;
+                    margin: 0 10px;
                     background: white;
                     outline: none;
                     border: 1px solid rgb(175, 174, 174);
                     height: 30px;
+                    cursor: pointer;
                 }
 
                 .change-number {
@@ -52,6 +71,26 @@ header {
                 }
             }
 
+        }
+
+        .total-price {
+            text-align: right;
+            margin: 10px 10%;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .order {
+            width: 60%;
+            height: 40px;
+            margin: 20px 20%;
+            background: rgb(209, 151, 164);
+            border: 1px solid white;
+            outline: none;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            cursor: pointer;
         }
     }
 }

@@ -7,8 +7,42 @@ import * as cartActions from '../../actions/cart';
 // import { setFilter } from '../../actions/filter';
 
 class Menu extends Component {
-    moreFilm() {
-        // this.props.addToCart(film, 1);
+    changeFilmNumber(targetBtn, filmEl) {
+        const that_removeFromCart = this.removeFromCart.bind(this);
+
+        const moreFilm = document.querySelectorAll('.more-film');
+        const lessFilm = document.querySelectorAll('.less-film');
+
+        moreFilm.forEach(item => {
+            if(targetBtn === item) {
+                this.props.changeCartNumber(filmEl.id, filmEl.number + 1);
+            }
+        });
+
+        lessFilm.forEach(item => {
+            if(targetBtn === item && filmEl.number >= 1) {
+                this.props.changeCartNumber(filmEl.id, filmEl.number - 1);
+            }
+            if(targetBtn === item && filmEl.number < 1) {
+                that_removeFromCart(filmEl.id);
+            }
+        });
+    }
+
+    removeFromCart(id) {
+        if(this.props.cartItems.some(item => item.id === id)) {
+            this.props.removeFromCart(id);
+        }
+    }
+
+    showCart() {
+        const cart = document.querySelector('.cart');
+        cart.classList.toggle('hidden');
+    }
+
+    hideCart() {
+        const cart = document.querySelector('.cart');
+        cart.classList.add('hidden');
     }
 
     render() {
@@ -17,27 +51,29 @@ class Menu extends Component {
             <header>
                 <h1>Магазин видеопластинок</h1>
                 <div className="cart-wrapper">
-                    <p>Итого: {totalPrice} грн.</p>
-                    <button>Корзина ({count})</button>
+                    <button onClick={() => this.showCart()}>Корзина ({count})</button>
                 </div>
 
-                <div className="cart">
+                <div className="cart hidden" onMouseLeave={() => this.hideCart()}>
                     <ul>
                         {cartItems.length === 0 && <li>Пока в вашей корзине пусто :(</li>}
                         {cartItems.length > 0 && cartItems.map(item => {
                             return (
-                                <li key={item.id}>
+                                <li key={item.id} onClick={(e) => this.changeFilmNumber(e.target, item)}>
                                     <span className="cart-titles">{item.title}</span>
                                     <div className="manage-number">
-                                        <button className="change-number" onClick={(item) => this.lessFilm(item)}>-</button>
-                                        <span>1</span>
-                                        <button className="change-number" onClick={(item) => this.moreFilm(item)}>+</button>
-                                        <button>Удалить</button>
+                                        <button className="change-number less-film">-</button>
+                                        <span>{item.number}</span>
+                                        <button className="change-number more-film">+</button>
+                                        <span>{item.number*item.price} грн.</span>
+                                        <button onClick={(e) => this.removeFromCart(item.id)}>Удалить</button>
                                     </div>
                                 </li>
                             );
                         })}
                     </ul>
+                    {cartItems.length > 0 && <p className="total-price">Итого: {totalPrice} грн.</p>}
+                    {cartItems.length > 0 && <button className="order">Оформить заказ</button>}
                 </div>
             </header>
         );
@@ -45,7 +81,7 @@ class Menu extends Component {
 }
 
 const mapStateToProps = ({ cart }) => ({
-    totalPrice: cart.items.reduce((total, item) => total + item.price, 0),
+    totalPrice: cart.items.reduce((total, item) => total + (item.price * item.number), 0),
     count: cart.items.length,
     cartItems: cart.items
 });

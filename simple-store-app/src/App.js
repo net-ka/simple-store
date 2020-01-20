@@ -51,8 +51,9 @@ class App extends Component {
 }
 
 
-const mapStateToProps = ({ films }) => ({
+const mapStateToProps = ({ films, favorites }) => ({
   films: films.items,
+  favorites: favorites.items,
   isReady: films.isReady,
   filteredItems: films.filterBy.filteredItems
 });
